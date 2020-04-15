@@ -24,38 +24,47 @@ Window {
         nought1.visible = false
         cross1.visible = false
         mouseArea1.enabled = true
+        field1.color = "transparent"
 
         nought2.visible = false
         cross2.visible = false
         mouseArea2.enabled = true
+        field2.color = "transparent"
 
         nought3.visible = false
         cross3.visible = false
         mouseArea3.enabled = true
+        field3.color = "transparent"
 
         nought4.visible = false
         cross4.visible = false
         mouseArea4.enabled = true
+        field4.color = "transparent"
 
         nought5.visible = false
         cross5.visible = false
         mouseArea5.enabled = true
+        field5.color = "transparent"
 
         nought6.visible = false
         cross6.visible = false
         mouseArea6.enabled = true
+        field6.color = "transparent"
 
         nought7.visible = false
         cross7.visible = false
         mouseArea7.enabled = true
+        field7.color = "transparent"
 
         nought8.visible = false
         cross8.visible = false
         mouseArea8.enabled = true
+        field8.color = "transparent"
 
         nought9.visible = false
         cross9.visible = false
         mouseArea9.enabled = true
+        field9.color = "transparent"
 
         window.turn = 0
 
@@ -76,6 +85,7 @@ Window {
                 || (arr[0] == arr[4] && arr[4] == arr[8])
                 || (arr[2] == arr[4] && arr[4] == arr[6]) )
         {
+            change_color()
             question.winner = "WINNER - " + n.toUpperCase()
             question.open()
         }
@@ -87,6 +97,58 @@ Window {
         else
         {
             turn_img(window.turn)
+        }
+    }
+
+    function change_color()
+    {
+        if (arr[0] == arr[1] && arr[1] == arr[2])
+        {
+            field1.color = "yellowgreen"
+            field2.color = "yellowgreen"
+            field3.color = "yellowgreen"
+        }
+        else if ( arr[3] == arr[4] && arr[4] == arr[5])
+        {
+            field4.color = "yellowgreen"
+            field5.color = "yellowgreen"
+            field6.color = "yellowgreen"
+        }
+        else if ( arr[6] == arr[7] && arr[7] == arr[8])
+        {
+            field7.color = "yellowgreen"
+            field8.color = "yellowgreen"
+            field9.color = "yellowgreen"
+        }
+        else if ( arr[0] == arr[3] && arr[3] == arr[6])
+        {
+            field1.color = "yellowgreen"
+            field4.color = "yellowgreen"
+            field7.color = "yellowgreen"
+        }
+        else if ( arr[1] == arr[4] && arr[4] == arr[7])
+        {
+            field2.color = "yellowgreen"
+            field5.color = "yellowgreen"
+            field8.color = "yellowgreen"
+        }
+        else if ( arr[2] == arr[5] && arr[5] == arr[8])
+        {
+            field3.color = "yellowgreen"
+            field6.color = "yellowgreen"
+            field9.color = "yellowgreen"
+        }
+        else if ( arr[0] == arr[4] && arr[4] == arr[8])
+        {
+            field1.color = "yellowgreen"
+            field5.color = "yellowgreen"
+            field9.color = "yellowgreen"
+        }
+        else if ( arr[2] == arr[4] && arr[4] == arr[6])
+        {
+            field3.color = "yellowgreen"
+            field5.color = "yellowgreen"
+            field7.color = "yellowgreen"
         }
     }
 
@@ -204,7 +266,6 @@ Window {
                         window.turn = window.turn + 1
                         mouseArea1.enabled = false
                     }
-
                 }
 
                 Image
