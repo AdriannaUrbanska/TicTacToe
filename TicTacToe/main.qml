@@ -141,7 +141,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -151,7 +151,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -196,7 +196,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -206,7 +206,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -250,7 +250,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -260,7 +260,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -310,7 +310,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -320,7 +320,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -364,7 +364,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -374,7 +374,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -418,7 +418,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -428,7 +428,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -478,7 +478,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -488,7 +488,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -532,7 +532,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -542,7 +542,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }
@@ -586,7 +586,7 @@ Window {
                     width: 70
                     height: 70
                     anchors.centerIn: parent
-                    source: "nought.png"
+                    source: "images/nought.png"
                     visible: false
                 }
 
@@ -596,7 +596,7 @@ Window {
                     width: 100
                     height: 100
                     anchors.centerIn: parent
-                    source: "cross.png"
+                    source: "images/cross.png"
                     visible: false
                 }
             }

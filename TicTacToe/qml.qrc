@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>cross.png</file>
-        <file>nought.png</file>
+        <file>images/cross.png</file>
+        <file>images/nought.png</file>
     </qresource>
 </RCC>
