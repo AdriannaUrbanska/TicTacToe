@@ -7,8 +7,8 @@ import QtQuick.Dialogs 1.1
 Window {
     id: window
     visible: true
-    width: 330
-    height: 350
+    width: 340
+    height: 400
 
     minimumWidth: width
     minimumHeight: height
@@ -61,6 +61,8 @@ Window {
 
         for(var i = 0; i<9; i++)
             arr[i] = i
+
+        turn_img(1)
     }
 
     function check(n)
@@ -74,8 +76,32 @@ Window {
                 || (arr[0] == arr[4] && arr[4] == arr[8])
                 || (arr[2] == arr[4] && arr[4] == arr[6]) )
         {
-            question.winner = n
+            question.winner = "WINNER - " + n.toUpperCase()
             question.open()
+        }
+        else if(window.turn == 8)
+        {
+            question.winner = "DRAW"
+            question.open()
+        }
+        else
+        {
+            turn_img(window.turn)
+        }
+    }
+
+    function turn_img(n)
+    {
+        if(n %2)
+        {
+            nought.visible = false
+            cross.visible = true
+
+        }
+        else
+        {
+            nought.visible = true
+            cross.visible = false
         }
     }
 
@@ -85,7 +111,8 @@ Window {
         title: "END"
         icon: StandardIcon.Question
         property string winner: ""
-        text: "WINNER - " + winner.toUpperCase() + "! \nDo you want to play again?"
+
+        text: winner.toUpperCase() + "! \nDo you want to play again?"
         standardButtons: StandardButton.Yes | StandardButton.No
         Component.onCompleted: visible = false
         onYes: restart()
@@ -96,6 +123,51 @@ Window {
     {
         anchors.centerIn: parent
         spacing: 2
+
+        Row
+        {
+            spacing: 2
+
+            Rectangle
+            {
+                width: 242
+                height: 50
+
+                Text
+                {
+                    anchors.centerIn: parent
+                    text: "CURRENT PLAYER: "
+                    font.pointSize: 18
+                    font.family: "Halvetica"
+                }
+            }
+
+            Rectangle
+            {
+                width: 60
+                height: 50
+
+                Image
+                {
+                    id: nought
+                    width: 30
+                    height: 30
+                    anchors.centerIn: parent
+                    source: "images/nought.png"
+                    visible: false
+                }
+
+                Image
+                {
+                    id: cross
+                    width: 50
+                    height: 50
+                    anchors.centerIn: parent
+                    source: "images/cross.png"
+                    visible: true
+                }
+            }
+        }
 
         Row
         {
