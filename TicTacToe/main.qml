@@ -1,7 +1,6 @@
 import QtQuick 2.5
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.0
-import QtGraphicalEffects 1.0
 import QtQuick.Dialogs 1.1
 
 Window {
@@ -16,9 +15,29 @@ Window {
     maximumHeight: height
 
     title: qsTr("Noughts and Crosses")
+
+    /**
+    *   A property which shows the current player.
+    *   If turn is even - it is cross player turn,
+    *   else - it is noughts player turn.
+    */
     property int turn: 0
+
+    /**
+    *   A property which keeps values of the fields:
+    *   - number of field - if the field is empty,
+    *   - "o" - if the field is filled with nought,
+    *   - "x" - if the field is filled with cross.
+    */
     property variant arr: ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
 
+    /**
+    *   Function which restarts the game:
+    *   - cleans all of the fields and sets their color to "transparent",
+    *   - enabled mouse area of all of the fields,
+    *   - sets values of the arr property to fields numbers,
+    *   - resets player turn.
+    */
     function restart()
     {
         nought1.visible = false
@@ -74,6 +93,12 @@ Window {
         turn_img(1)
     }
 
+    /**
+    *   Function which checks state of the game after player n turn:
+    *   - checks if player n won,
+    *   - check if all of the fields are filled and there is a drawn,
+    *   - if none of the above conditions is met - function sets the next player turn.
+    */
     function check(n)
     {
         if( (arr[0] == arr[1] && arr[1] == arr[2])
@@ -100,6 +125,9 @@ Window {
         }
     }
 
+    /**
+    *   Function which colors the winning fields with "yellowgreen" color.
+    */
     function change_color()
     {
         if (arr[0] == arr[1] && arr[1] == arr[2])
@@ -152,13 +180,15 @@ Window {
         }
     }
 
+    /**
+    *   Function which sets image of the current n player.
+    */
     function turn_img(n)
     {
         if(n %2)
         {
             nought.visible = false
             cross.visible = true
-
         }
         else
         {
@@ -167,6 +197,10 @@ Window {
         }
     }
 
+    /**
+    *   Message Dialog which shows information when the game is over,
+    *   asks players if they want to play again.
+    */
     MessageDialog
     {
         id: question
@@ -186,6 +220,9 @@ Window {
         anchors.centerIn: parent
         spacing: 2
 
+        /**
+        *   Row with current player title and image.
+        */
         Row
         {
             spacing: 2
@@ -231,6 +268,10 @@ Window {
             }
         }
 
+        /**
+        *   The three next row contain rectangles
+        *   - 9 fields to be filled with a cross or nought.
+        */
         Row
         {
             spacing: 2
@@ -736,6 +777,10 @@ Window {
 
         }
 
+        /**
+        *   Button "Restart".
+        *   After cliking - the game restarts.
+        */
         Button
         {
             width: 304
